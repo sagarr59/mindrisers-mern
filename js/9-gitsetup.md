@@ -14,3 +14,6 @@ DAILY USE
 4. git push
 
 5. git clone <repoURL>
+        Eg: git clone https://github.com/sagarr59/mindrisers-mern
+
+6. git pull

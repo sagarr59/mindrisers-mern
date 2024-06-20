@@ -11,7 +11,8 @@ if (willRain) {
   console.log("No need to take");
 }
 
-//ternary
+//ternary 
 console.log(
   willRain ? "Take umbrella" : hasProb ? "Might rain" : "No need to take"
 );
+ 
