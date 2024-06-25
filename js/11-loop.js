@@ -83,3 +83,5 @@ for (let i = startFrom; i <= endAt; i++) {
   let result = number * i;
   console.log(`${number} x ${i} = ${result}`);
 }
+
+
