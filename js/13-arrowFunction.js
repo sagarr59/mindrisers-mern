@@ -35,5 +35,4 @@ setTimeout(() => {
   console.log("Do Something");
 }, 2000);
 
-
 console.log("After Popup");
