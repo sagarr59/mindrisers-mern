@@ -1,3 +1,5 @@
+const fs = require("fs");
+
 /* global objects 
     console.log
     setTimout
@@ -9,33 +11,35 @@
 
 /* node modules
      core
+       - fs
+       - path
+       - http 
      third party  eg: bcrypt
      local
 */
 
-console.log("connected: node > ide.js")
+console.log("connected: node > ide.js");
 // document.getElementsByTagName("h1")[0].style.color = "Red"
-console.log(__filename)
-console.log(__dirname)
+console.log(__filename);
+console.log(__dirname);
 
-let dbUsers = []
+const signup = require("./auth");
 
-const bcrypt = require("bcrypt")
-const saltRounds = 10
+signup("ram", "secret");
+signup("shyam", "secret");
+signup("sita", "secret");
 
-function signup(username, password) {
-  bcrypt.hash(password, 10, function (err, hash) {
-    // Store hash in your password DB.
-    console.log("signup",hash)
-    dbUsers.push({
-      username,
-      password: hash
-    })
-  })
-}
+const product = require("./product");
+// const product = { getProduct: fn , editProduct :fn, ......}
 
-signup("Sagar", "secret")
-signup("Shyam", "secret")
-signup("Ram", "secret")
+product.getProducts();
+product.editProduct();
+product.deleteProduct();
+product.custom();
 
-console.log(dbUsers)
+const { getProducts, editProduct, deleteProduct } = require("./product");
+
+getProducts();
+editProduct();
+
+fs.writeFileSync("log.txt", "log something");
