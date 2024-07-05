@@ -1,6 +1,7 @@
-export let title = " FEATURED PRODUCTS LIST"
+import React from "react"
+import Product from "./Product"
 
-export let products = [
+const products = [
   {
     title: "Mobile",
     price: 10000,
@@ -37,3 +38,30 @@ export let products = [
     description: "fasdf lroeam .. asdfadsfasdf lroeam .. asdfadsfasdf lroeam .. asdfads",
   },
 ]
+
+const title = "FEATURED PRODUCTS LIST"
+const featuredProducts = products.filter((el) => el.featured)
+const normalProducts = products.filter((el) => !el.featured)
+
+function ProductsList() {
+  return (
+    <>
+      <h1>{title}</h1>
+      <div className="mainContainer">
+        {featuredProducts.map((el, index) => (
+          <Product key={index} title={el.title} price={el.price} discountedPrice={el.discountedPrice} description={el.description} />
+        ))}
+      </div>
+      <br />
+      <br />
+      <h1>NORMAL PRODUCTS</h1>
+      <div className="mainContainer">
+        {normalProducts.map((el, index) => (
+          <Product key={index} title={el.title} price={el.price} discountedPrice={el.discountedPrice} description={el.description} />
+        ))}
+      </div>
+    </>
+  )
+}
+
+export default ProductsList
