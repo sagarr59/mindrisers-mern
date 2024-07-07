@@ -1,12 +1,16 @@
-import ProductsList from "./components/Products/ProductsList.jsx"
-import Todo from "./components/Products/Todo/Todos.jsx"
-
+// import ProductsList from "./components/Products/ProductsList.jsx"
+// import Todo from "./components/Products/Todo/Todos.jsx"
+import Counter from "./Counter.jsx"
+import Theme from "./Theme.jsx"
 function App() {
   return (
     <>
-      <Todo />
-
-      <ProductsList />
+      <Counter />
+      <br />
+      <br />
+      <Theme />
+      {/* <Todo />
+      <ProductsList /> */}
     </>
   )
 }
