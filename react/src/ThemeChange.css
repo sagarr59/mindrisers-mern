@@ -1,0 +1,25 @@
+body.light-mode {
+    background-color: white;
+    color: black;
+  }
+  
+  body.dark-mode {
+    background-color: black;
+    color: white;
+  }
+  
+  .app {
+    text-align: center;
+  }
+  
+  .app-header {
+    margin-top: 50px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  

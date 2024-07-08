@@ -2,13 +2,15 @@
 // import Todo from "./components/Products/Todo/Todos.jsx"
 import Counter from "./Counter.jsx"
 import Theme from "./Theme.jsx"
+import ThemeChange from "./ThemeChange.jsx"
 function App() {
   return (
     <>
-      <Counter />
+      {/* <Counter />
       <br />
       <br />
-      <Theme />
+      <Theme /> */}
+      <ThemeChange />
       {/* <Todo />
       <ProductsList /> */}
     </>
