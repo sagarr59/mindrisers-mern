@@ -24,12 +24,10 @@ let todos = [
   {
     title: "REACT",
     status: false,
-    user: "Sagar",
   },
   {
     title: "MONOGODB",
     status: false,
-    user: "Sagar",
   },
   {
     title: "EXPRESS.JS",
@@ -49,16 +47,18 @@ export default function Todo() {
             <tr>
               <th>TITLE</th>
               <th>STATUS</th>
+              <th>USERS</th>
             </tr>
           </thead>
           <tbody>
             {todos.map((todo, index) => (
               <tr key={index}>
                 <td>
-                  {todo.title} {todo.user ? `(${todo.user})` : ``}
+                  {todo.title} {todo.user ? `(${todo.user})` : ""}
                 </td>
                 {/* conditional rendering */}
                 <td>{todo.status ? "✅" : "❌"}</td>
+                <td>{todo.user ? <span> {todo.user}</span> : <span> -</span>}</td>
               </tr>
             ))}
           </tbody>

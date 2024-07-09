@@ -4,9 +4,9 @@
   box-sizing: border-box;
 }
 
-/* h1{
+/* h1 {
   padding: 30px;
-  background-color: antiquewhite;
+  background-color: rgb(21, 210, 217);
   text-align: center;
 } */
 
@@ -54,6 +54,45 @@
 }
 
 .dark {
-  background-color: black;
+  background-color: rgb(44, 42, 42);
   color: white;
+}
+
+.btn,
+.count {
+  background-color: rgb(30, 200, 200);
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn:hover {
+  scale: 1.1;
+}
+.count:hover {
+  scale: 1.1;
+}
+
+.section {
+  display: flex;
+  gap: 40px;
+  text-decoration: none;
+  list-style-type: none;
+  font-size: 25px;
+  padding: 30px;
+  cursor: pointer;
+}
+
+.section > li {
+  border-radius: 4px;
+}
+
+.section > li:hover {
+  text-decoration: underline;
+  scale: 1.1;
 }

@@ -32,8 +32,12 @@ export default function Counter() {
     <div>
       <h1>Counter:{value}</h1>
 
-      <button onClick={increment}>Increment</button>
-      <button onClick={decrement}>Decrement</button>
+      <button className="count" onClick={increment}>
+        Increment
+      </button>
+      <button className="count" onClick={decrement}>
+        Decrement
+      </button>
     </div>
   )
 }
