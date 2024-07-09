@@ -1,58 +1,70 @@
 import React, { useState } from "react"
 
 export default function GoogleTabs() {
-  const [section, setSection] = useState("AllSection")
-  const allSection = () => {
-    setSection("AllSection")
-  }
-  const images = () => {
-    setSection("images")
-  }
-  const videos = () => {
-    setSection("vidoes")
-  }
-  const news = () => {
-    setSection("news")
-  }
+  const [currentTab, setCurrentTab] = useState("all")
+
   return (
     <div>
-      <h1>Section Selection</h1>
-      <h2>Current Section: {section}</h2>
-
+      <h1>Current Tab: {currentTab}</h1>
+      <hr />
       <ul className="section">
-        <li onClick={allSection}>All Section</li>
-        <li onClick={images}>Images</li>
-        <li onClick={videos}>Videos</li>
-        <li onClick={news}>News</li>
+        <li onClick={() => setCurrentTab("all")}>All {currentTab === "all" && "(selected)"}</li>
+        <li onClick={() => setCurrentTab("images")}>Images {currentTab === "images" && "(selected)"}</li>
+        <li onClick={() => setCurrentTab("videos")}>Videos {currentTab === "videos" && "(selected)"}</li>
+        <li onClick={() => setCurrentTab("news")}>News {currentTab === "news" && "(selected)"}</li>
       </ul>
-      <div>
-        <h2>All Section</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, facilis possimus. Earum temporibus laudantium ducimus officiis blanditiis harum
-          delectus amet?
-        </p>
-      </div>
-      <div>
-        <h2>Images</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, facilis possimus. Earum temporibus laudantium ducimus officiis blanditiis harum
-          delectus amet?
-        </p>
-      </div>
-      <div>
-        <h2>Videos</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, facilis possimus. Earum temporibus laudantium ducimus officiis blanditiis harum
-          delectus amet?
-        </p>
-      </div>
-      <div>
-        <h2>News</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, facilis possimus. Earum temporibus laudantium ducimus officiis blanditiis harum
-          delectus amet?
-        </p>
-      </div>
+
+      {currentTab === "all" && (
+        <div>
+          <h2>All Section</h2>
+          <p>
+            All Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa molestiae vel corporis sit rem quia animi excepturi corrupti qui perspiciatis,
+            sequi reprehenderit consequuntur? Itaque et iste sed, odio praesentium dolor.
+          </p>
+          <h2>Images Section</h2>
+          <p>
+            Images Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa molestiae vel corporis sit rem quia animi excepturi corrupti qui perspiciatis,
+            sequi reprehenderit consequuntur? Itaque et iste sed, odio praesentium dolor.
+          </p>
+          <h2>Videos Section</h2>
+          <p>
+            Videos Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa molestiae vel corporis sit rem quia animi excepturi corrupti qui perspiciatis,
+            sequi reprehenderit consequuntur? Itaque et iste sed, odio praesentium dolor.
+          </p>
+          <h2>News Section</h2>
+          <p>
+            News Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa molestiae vel corporis sit rem quia animi excepturi corrupti qui perspiciatis,
+            sequi reprehenderit consequuntur? Itaque et iste sed, odio praesentium dolor.
+          </p>
+        </div>
+      )}
+      {currentTab === "images" && (
+        <div>
+          <h2>Images Section</h2>
+          <p>
+            Images Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa molestiae vel corporis sit rem quia animi excepturi corrupti qui perspiciatis,
+            sequi reprehenderit consequuntur? Itaque et iste sed, odio praesentium dolor.
+          </p>
+        </div>
+      )}
+      {currentTab === "videos" && (
+        <div>
+          <h2>Videos Section</h2>
+          <p>
+            Videos Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa molestiae vel corporis sit rem quia animi excepturi corrupti qui perspiciatis,
+            sequi reprehenderit consequuntur? Itaque et iste sed, odio praesentium dolor.
+          </p>
+        </div>
+      )}
+      {currentTab === "news" && (
+        <div>
+          <h2>News Section</h2>
+          <p>
+            News Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa molestiae vel corporis sit rem quia animi excepturi corrupti qui perspiciatis,
+            sequi reprehenderit consequuntur? Itaque et iste sed, odio praesentium dolor.
+          </p>
+        </div>
+      )}
     </div>
   )
 }
