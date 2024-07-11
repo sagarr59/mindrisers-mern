@@ -12,6 +12,7 @@ export default function GoogleTabs() {
         <li onClick={() => setCurrentTab("images")}>Images {currentTab === "images" && "(selected)"}</li>
         <li onClick={() => setCurrentTab("videos")}>Videos {currentTab === "videos" && "(selected)"}</li>
         <li onClick={() => setCurrentTab("news")}>News {currentTab === "news" && "(selected)"}</li>
+        <li onClick={() => setCurrentTab("maps")}>Maps {currentTab === "maps" && "(selected)"}</li>
       </ul>
 
       {currentTab === "all" && (
@@ -59,6 +60,15 @@ export default function GoogleTabs() {
       {currentTab === "news" && (
         <div>
           <h2>News Section</h2>
+          <p>
+            News Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa molestiae vel corporis sit rem quia animi excepturi corrupti qui perspiciatis,
+            sequi reprehenderit consequuntur? Itaque et iste sed, odio praesentium dolor.
+          </p>
+        </div>
+      )}
+      {currentTab === "maps" && (
+        <div>
+          <h2>Maps Section</h2>
           <p>
             News Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa molestiae vel corporis sit rem quia animi excepturi corrupti qui perspiciatis,
             sequi reprehenderit consequuntur? Itaque et iste sed, odio praesentium dolor.
