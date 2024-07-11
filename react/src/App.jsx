@@ -9,10 +9,10 @@ function App() {
   return (
     <>
       <GoogleTabs />
-      <br />
+
       {/* <Counter />
-      <br />
-      <br />
+     
+      
       <Theme /> */}
       {/* 
       <Todo />
